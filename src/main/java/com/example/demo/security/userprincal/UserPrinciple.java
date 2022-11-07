@@ -49,6 +49,10 @@ public class UserPrinciple implements UserDetails {
         return name;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
