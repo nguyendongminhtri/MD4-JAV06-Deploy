@@ -55,7 +55,7 @@ public class AuthController {
             return new ResponseEntity<>(new ResponMessage("noemail"), HttpStatus.OK);
         }
 
-        User user = new User(signUpForm.getName(), signUpForm.getUsername(), signUpForm.getEmail(), passwordEncoder.encode(signUpForm.getPassword()));
+        User user = new User(signUpForm.getNames(), signUpForm.getUsername(), signUpForm.getEmail(), passwordEncoder.encode(signUpForm.getPassword()));
         String avatar = "https://firebasestorage.googleapis.com/v0/b/chinhbeo-18d3b.appspot.com/o/avatar.jpg?alt=media&token=56f66b7d-6196-42da-bb8f-73828108db1e";
         user.setAvatar(avatar);
         Set<String> strRoles = signUpForm.getRoles();
